@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to render movies from local storage
     function renderMovies() {
-        list.innerHTML = ''; // Clear the existing list
+        list.innerHTML = '';
         storedMovies.forEach(movie => {
             const li = createMovieListItem(movie.name, movie.date);
             list.appendChild(li);
@@ -56,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function createMovieListItem(name, date) {
         const li = document.createElement('li');
         const movieName = document.createElement('span');
-        const movieDate = document.createElement('span');
+        const movieDate = document.createElement('span'); 
         const deleteBtn = document.createElement('span');
 
         movieName.textContent = name;
-        movieName.className = 'name';  // Assign the class 'name'
+        movieName.className = 'name';
+        movieDate.className = 'date';  
         movieDate.textContent = date;
         deleteBtn.textContent = 'delete';
         deleteBtn.className = 'delete';
